@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rekenmachine REDO", "Rekenmachine REDO\Rekenmachine REDO.csproj", "{03865186-B929-4633-BB73-CE5F66EF885C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03865186-B929-4633-BB73-CE5F66EF885C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03865186-B929-4633-BB73-CE5F66EF885C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03865186-B929-4633-BB73-CE5F66EF885C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03865186-B929-4633-BB73-CE5F66EF885C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {778978A2-496D-4B5C-A770-259E554F1ABA}
+	EndGlobalSection
+EndGlobal

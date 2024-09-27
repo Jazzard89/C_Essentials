@@ -1,0 +1,41 @@
+﻿<Window x:Class="WPF_controls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+
+
+        <ComboBox Name="CboOpleiding" MaxDropDownHeight="50px" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200px" SelectionChanged="CboOpleiding_SelectionChanged">
+            <ComboBoxItem Content="Programmeren"/>
+            <ComboBoxItem Content="Netwerkbeheer"/>
+            <ComboBoxItem Content="Internet of Things"/>
+            <ComboBoxItem Content="Digitale Vormgever"/>
+            <ComboBoxItem Content="Drone opleiding"/>
+        </ComboBox>
+        <Button Content="add item" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="568,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-1.096,-2.364" Click="Button_Click"/>
+        <ListBox Name="LbxNamen" Grid.Column="1" SelectionMode="Multiple" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="100" Width="120">
+            <ListBoxItem Content="Mark"/>
+            <ListBoxItem Content="Philippe"/>
+            <ListBoxItem Content="Patrick"/>
+            <ListBoxItem Content="Abdel"/>
+            <ListBoxItem Content="Jan"/>
+        </ListBox>
+        
+
+
+
+    </Grid>
+</Window>

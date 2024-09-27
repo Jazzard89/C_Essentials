@@ -1,0 +1,30 @@
+﻿<Window x:Class="Menus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Menus"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Menu Name="HoofdMenu">
+            <MenuItem Header="something"/>
+            
+            <MenuItem Header="something else"/>
+        </Menu>
+        <Slider Name="Schuifregelaar" Height="35" Width="386"
+                      Margin="85 115 0 0" TickPlacement="BottomRight"
+                      AutoToolTipPlacement="TopLeft" Minimum="600" Maximum="50000" TickFrequency="1000"
+                      IsSnapToTickEnabled="False" ValueChanged="Schuifregelaar_ValueChanged"
+                      SmallChange="100" LargeChange="5000" Grid.Row="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

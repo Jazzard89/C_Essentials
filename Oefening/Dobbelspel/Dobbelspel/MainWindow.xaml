@@ -1,0 +1,56 @@
+﻿<Window x:Class="Dobbelspel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dobbelspel"
+        mc:Ignorable="d"
+        Title="Dobbelspel" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <WrapPanel Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" >
+            <RadioButton Name="btnVijf" Content="Eerste 5"  VerticalAlignment="Center" Margin="7 0 7 0" Checked="RB_Checked" />
+            <RadioButton Name="btnTien" Content="Eerste 10" VerticalAlignment="Center" Margin="7 0 7 0" Checked="RB_Checked" />
+            <RadioButton Name="btnVijftien" Content="Eerste 15" VerticalAlignment="Center" Margin="7 0 7 0" Checked="RB_Checked" />
+        </WrapPanel>
+
+        
+
+        <TextBlock Name="txtGroenResultaat" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"  Background="Green" TextWrapping="Wrap" Grid.Row="1" Grid.Column="0" Width="320" />
+        <TextBlock Name="txtRoodResultaat" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"  Background="Red" TextWrapping="Wrap" Grid.Row="1" Grid.Column="2" Width="320" />
+        <TextBlock Name="middenVeld1" Background="AliceBlue" TextWrapping="Wrap" Grid.Row="3" Grid.Column="1" Grid.RowSpan="3"/>
+        <Image Name="vuistImage" Source="Vuist.png" Grid.Column="1" Grid.Row="3" Grid.RowSpan="3" Visibility="Hidden"/>
+        <Image Name="jijWint" Source="Wijsvinger_links.jpg" Grid.Column="1" Grid.Row="4" Visibility="Hidden" Stretch="UniformToFill"/>
+        <Image Name="computerWint" Source="Wijsvinger_rechts.jpg" Grid.Column="1" Grid.Row="4" Visibility="Hidden" Stretch="UniformToFill"/>
+
+        <TextBox Name="txtGroen" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Lijst scores speler" VerticalAlignment="Top" IsEnabled="False" Grid.RowSpan="4"/>
+        <TextBox Name="txtRood" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" Text="Lijst scores speler" VerticalAlignment="Top" IsEnabled="False" Grid.RowSpan="4"/>
+
+        <Button Name="btnDobbelen" IsEnabled="False" Grid.Column="1" Grid.Row="2" Content="Dobbelen" Width="80" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnDobbelen_Click" />
+
+        <Label Content="Copyright PXL" Grid.Row="6" Grid.Column="0"/>
+        <TextBox IsEnabled="False" Name="txtDateTime" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Right"/>
+        
+        <Label Name="lblSelector" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1"  VerticalAlignment="Center" IsEnabled="False"/>
+
+
+    </Grid>
+
+
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="CenterParcs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:magWeg"
+        mc:Ignorable="d"
+        Title="CenterParcs" Height="450" Width="800">
+    <Grid Background="#FF86CE80">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Background="White" IsEnabled="False" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Margin="0 4" />
+
+        <Label Content="Center Parcs" Grid.Column="1" FontSize="45"  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF2C6917" />
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Label Content="Type Woning" HorizontalAlignment="Left"/>
+            <ComboBox Name="cbTypeWoning" HorizontalAlignment="Center" Height="20" Width="380" SelectionChanged="cbTypeWoning_SelectionChanged" />
+            <Label Content="Aantal Dagen" HorizontalAlignment="Left"/>
+            <ComboBox Name="cbAantalDagen" HorizontalAlignment="Center" Height="20" Width="380" SelectionChanged="cbTypeWoning_SelectionChanged">
+
+
+            </ComboBox>
+            <Label Content="Prijs:" HorizontalAlignment="Left"/>
+            <TextBox Name="txtPrijs" IsReadOnly="True" Margin="10 0"/>
+
+            <Button Content="sorteer" Height="40" Width="200" Margin="0 40 0 0" Click="Button_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

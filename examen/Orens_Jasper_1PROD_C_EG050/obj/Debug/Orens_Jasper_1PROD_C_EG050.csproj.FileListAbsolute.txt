@@ -1,0 +1,16 @@
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050.csproj.AssemblyReference.cache
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050.csproj.SuggestedBindingRedirects.cache
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\MainWindow.g.cs
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\App.g.cs
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050_MarkupCompile.cache
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050_MarkupCompile.lref
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\bin\Debug\Orens_Jasper_1PROD_C_EG050.exe.config
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\bin\Debug\Orens_Jasper_1PROD_C_EG050.exe
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\bin\Debug\Orens_Jasper_1PROD_C_EG050.pdb
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\MainWindow.baml
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050.g.resources
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050.Properties.Resources.resources
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050.csproj.GenerateResource.cache
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050.csproj.CoreCompileInputs.cache
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050.exe
+C:\Users\J\Desktop\examen\Orens_Jasper_1PROD_C_EG050\obj\Debug\Orens_Jasper_1PROD_C_EG050.pdb

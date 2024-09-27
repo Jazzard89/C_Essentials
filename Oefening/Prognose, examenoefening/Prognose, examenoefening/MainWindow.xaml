@@ -1,0 +1,94 @@
+﻿<Window x:Class="Examen_oefeningen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prognose__examenoefening"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1065" FontSize="17" Loaded="MainWindow_Loaded">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Bestand" >
+                <MenuItem Header="Wissen" Click="Wissen">
+                </MenuItem>
+                <MenuItem Header="Sluiten" Click="Afsluiten"/>
+            </MenuItem>
+        </Menu>
+
+
+        <Grid DockPanel.Dock="Top" Margin="20 0 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="13"/>
+                <ColumnDefinition Width="147"/>
+                <ColumnDefinition Width="330"/>
+                <ColumnDefinition Width="575"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="82"/>
+                <RowDefinition Height="207"/>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="169"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.ColumnSpan="3" Margin="8,8,8,8">
+                <Label Content="Naam"/>
+                <ComboBox Name="cbNaam" Width="325" HorizontalAlignment="Left"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Background="LightGray" Margin="0 5 8 0" Grid.ColumnSpan="2">
+                <CheckBox Name="cbCompetitielid" Content="Competitielid?" Margin="10 5" />
+                <CheckBox Name="cbNieuwLid" Content="Nieuw lid?" Margin="10 0"/>
+                <Label FontStyle="Italic" Content="Rang in gezin" Margin="10 3" />
+                <TextBox Name="txtRang" Width="80" HorizontalAlignment="Left" Margin="10 3"/>
+                <Label FontStyle="Italic" Content="Tijd (in sec)" Margin="10 3" />
+                <TextBox Name="txtTijd" Width="80" HorizontalAlignment="Left" Margin="10 3" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="2" Margin="20 10 0 0">
+                <Label Content="Categorie" FontStyle="Italic"/>
+                <StackPanel Background="LightGray" Margin="0 0 160 0">
+                    <RadioButton Name="rbPrem" Content="Preminiem" Margin="0 5"/>
+                    <RadioButton Name="rbMin" Content="Miniem" Margin="0 5"/>
+                    <RadioButton Name="rbJun" Content="Junior" Margin="0 5"/>
+                    <RadioButton Name="rbCad" Content="Cadet" Margin="0 5"/>
+                    <RadioButton Name="rbSen" Content="Senior" Margin="0 5"/>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Name="txtResultaat" Grid.Row="2" Grid.ColumnSpan="3" Margin="8 11 60 15"/>
+            <WrapPanel Grid.Row="3" Grid.ColumnSpan="4" Height="56" VerticalAlignment="Top">
+                <Button Content="Berekenen" Width="110" Margin="10 15 20 10" Click="Berekenen" />
+                <Button Content="Wissen" Width="110" Margin="10 15 20 10" Click="Wissen" />
+                <Button Content="Afsluiten" Width="110" Margin="10 15 20 10" Click="Afsluiten" />
+            </WrapPanel>
+
+            <StackPanel Name="spPrognose" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Margin="25 40 120 15" Visibility="Hidden">
+                <Label Content="Gemiddelde tijdprognose in sec:(geldig voor nieuwe leden):" FontStyle="Italic"/>
+                <StackPanel Name="StackPanelPrognose" Background="LightGray" >
+                    <TextBlock Text="Nu"/>
+                    <TextBox Name="txtNu0" Background="YellowGreen" Width="80" HorizontalAlignment="Left" Text="Prognose"/>
+
+                    <TextBlock Text="Na 1 jaar" Margin="0 15 0 0"/>
+                    <TextBox Name="txtNu1" Background="YellowGreen" Width="80" HorizontalAlignment="Left" Text="Prognose"/>
+
+                    <TextBlock Text="Na 2 jaar" Margin="0 15 0 0"/>
+                    <TextBox Name="txtNu2" Background="YellowGreen" Width="80" HorizontalAlignment="Left" Text="Prognose"/>
+
+                    <TextBlock Text="Na 3 jaar" Margin="0 15 0 0"/>
+                    <TextBox Name="txtNu3" Background="YellowGreen" Width="80" HorizontalAlignment="Left" Text="Prognose"/>
+
+                    <TextBlock Text="Na 4 jaar" Margin="0 15 0 0"/>
+                    <TextBox Name="txtNu4" Background="YellowGreen" Width="80" HorizontalAlignment="Left" Text="Prognose"/>
+
+                    <TextBlock Text="Na 5 jaar" Margin="0 15 0 0"/>
+                    <TextBox Name="txtNu5" Background="YellowGreen" Width="80" HorizontalAlignment="Left" Text="Prognose"/>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+        <WrapPanel DockPanel.Dock="Bottom" Margin="10 0" Height="40">
+            <Image Source="/logo.jpg"/>
+            <Label Content="Sportcursussen" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0"/>
+            <TextBlock Name="txtTimeShow"/>
+        </WrapPanel>
+    </DockPanel>
+</Window>

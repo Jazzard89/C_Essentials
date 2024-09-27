@@ -1,0 +1,30 @@
+﻿<Window x:Class="REDO_Toepassing_1_Euro_omzetten_naar_Dollar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:REDO_Toepassing_1_Euro_omzetten_naar_Dollar"
+        mc:Ignorable="d"
+        Title="Omzetten van Euro naar USD" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Bedrag in Euro:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Bedrag in Dollar:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <TextBox Name="txtEuro" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250"/>
+        <TextBox Name="txtDollar" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" IsReadOnly="True"/>
+
+        <Button Name="btnBerekenen" Content="Berekenen" Grid.Row="0" Grid.Column="2" Margin="15" Click="btnBerekenen_Click"/>
+        <Button Name="btnWissen" Content="Wissen" Grid.Row="1" Grid.Column="2" Margin="15" Click="btnWissen_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="examenTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:examenTool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Margin="5" Grid.Column="0">
+            <Label Content="Topic"/>
+            <ComboBox Name="cbTopic" Height="25" Width="200" SelectionChanged="cbTopic_change">
+                <ComboBoxItem Content="Arrays"/>
+                <ComboBoxItem Content="Lists"/>
+                <ComboBoxItem Content="Time Dispatcher"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Margin="5" Grid.Column="1" >
+            <Label Name="lblSubject" Content="Subject" Visibility="Hidden"/>
+            <ComboBox Name="cbSubject" Height="25" Width="200" SelectionChanged="cbSubject_change" Visibility="Hidden" >
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Margin="5" Grid.Column="2" >
+            <Label Name="lblFunction" Content="Function" Visibility="Hidden"/>
+            <ComboBox Name="cbFunction" Height="25" Width="200" SelectionChanged="cbFunction_change" Visibility="Hidden" >
+            </ComboBox>
+        </StackPanel>
+
+        <ListBox Name="lboxResult" Grid.Row="1" Grid.ColumnSpan="2" Margin="20" SelectionChanged="lboxResult_Click" />
+    </Grid>
+</Window>

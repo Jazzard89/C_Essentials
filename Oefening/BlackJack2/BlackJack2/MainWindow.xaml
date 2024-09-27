@@ -1,0 +1,111 @@
+﻿<Window x:Class="BlackJack.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlackJack"
+        mc:Ignorable="d"
+        Title="BlackJack" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="top" Background="Black" >
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Bestand" >
+                    <MenuItem Header="Historiek" Click="Historiek_Click">
+                    </MenuItem>
+                    <MenuItem Header="Zet geluid uit" Click="Geluid_Click">
+                    </MenuItem>
+                    <MenuItem Header="Zet muziek uit" Click="Muziek_Click"/>
+                </MenuItem>
+                <MenuItem Header="Afsluiten" Click="MenuItemAfsluiten_Click" >
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+
+        <DockPanel DockPanel.Dock="Bottom" Background="Black" >
+            <TextBlock Name="txtTimeShow" Foreground="White" />
+            <TextBlock Name="txtLaatsteHand" Foreground="Wheat" HorizontalAlignment="Right"  />
+        </DockPanel>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/background.png"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Speler" Grid.Column="0" Grid.Row="0" FontSize="40" Margin="10 0 10 0" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White"/>
+            <Label Content="Bank" Grid.Column="4" Grid.Row="0" FontSize="40" Margin="10 0 10 0" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White"/>
+
+            <TextBox Name="txtRstSpeler" Grid.Column="0"  Grid.Row="1" Grid.RowSpan="2" Margin="17" Foreground="White" Background="#FF820000"/>
+            <TextBox Name="txtRstBank" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" Margin="17" Background="#FF820000" Foreground="White"/>
+
+            <TextBox Name="txtScoreSpeler" Text="0" Grid.Column="1" Grid.Row="0" FontSize="40" Margin="10 0 40 0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" IsEnabled="False" Background="{x:Null}" BorderThickness="0" />
+            <TextBox  Name="txtScoreBank" Text="0" Grid.Column="4" Grid.Row="0" FontSize="40" Margin="10 0 40 0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" IsEnabled="False"  Background="{x:Null}" BorderThickness="0" />
+
+            <StackPanel Grid.Column="3" Grid.Row="0" Grid.RowSpan="3" Margin="15">
+                <Button IsEnabled="False" Name="btnDeel" Content="Deel" FontSize="16" Margin="30 5" Background="#FF22BD40" Click="btnDeel_Click" />
+                <Button IsEnabled="False" Name="btnHit" Content="Hit" FontSize="16" Margin="30 5" Background="#FF22BD40" Click="btnHit_Click"/>
+                <Button IsEnabled="False" Name="btnStand" Content="Stand" FontSize="16" Margin="30 5" Background="#FF22BD40" Click="btnStand_Click"/>
+                <Button IsEnabled="False" Name="btnDouble" Content="Double Down" FontSize="16" Margin="30 5" Background="#FF22BD40" Click="btnDouble_Click" />
+                <Button IsEnabled="True" Name="btnNieuw" Content="Nieuw Spel" FontSize="16" Margin="30 5" Background="#FF22BD40" Click="btnNieuw_Click" />
+            </StackPanel>
+
+
+
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <Label Content="Inzet: " FontSize="17" HorizontalAlignment="Right" Margin="1" />
+                <Label Content="Kapitaal: " FontSize="17" HorizontalAlignment="Right" Margin="1" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Grid.Row="1">
+                <TextBox Name="txtInzet" Width="80"  HorizontalAlignment="Left" Margin="5" FontSize="17" Background="#b0dfb9" IsEnabled="False" />
+                <TextBox Name="txtKapitaal" Width="80"  HorizontalAlignment="Left" Margin="5" FontSize="17" Background="#b0dfb9" IsEnabled="False" IsReadOnly="True"/>
+            </StackPanel>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Name="imgKaart5de" Visibility="Hidden" Source="/Card_backside.png" Grid.Column="4" Grid.ColumnSpan="4" Margin="0 15" />
+                <Image Name="imgKaart4de" Visibility="Hidden" Source="/Card_backside.png" Grid.Column="3" Grid.ColumnSpan="4" Margin="0 15" />
+                <Image Name="imgKaart3de" Visibility="Hidden" Source="/Card_backside.png" Grid.Column="2" Grid.ColumnSpan="4" Margin="0 15" />
+                <Image Name="imgKaart2de" Visibility="Hidden" Source="/Card_backside.png" Grid.Column="1" Grid.ColumnSpan="4" Margin="0 15" />
+                <Image Name="imgKaart1ste" Visibility="Hidden" Grid.Column="0" Grid.ColumnSpan="4" Margin="0 15">
+                    <Image.Source>
+                        <BitmapImage UriSource="/Card_backside.png" Rotation="Rotate0"/>
+                    </Image.Source>
+                </Image>
+            </Grid>
+
+
+
+            <DockPanel Grid.Column="3" Grid.Row="3">
+                <Image Name="imgKaartStack" Source="/Card_stack_full.png" HorizontalAlignment="Center"/>
+                <StackPanel  VerticalAlignment="Center">
+                    <Label Content="Cards in &#xD;&#xA;deck:" Foreground="Azure" HorizontalAlignment="Center"/>
+                    <Label Name="lblResterendeKaarten" Content="" FontSize="20" Foreground="Azure" HorizontalAlignment="Center"/>
+
+                </StackPanel>
+
+            </DockPanel>
+        </Grid>
+    </DockPanel>
+</Window>

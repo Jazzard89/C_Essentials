@@ -1,0 +1,80 @@
+﻿<Window x:Class="Orens_Jasper_1PROD_C_EG050.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Orens_Jasper_1PROD_C_EG050"
+        mc:Ignorable="d"
+        Title="Vogels Spotten" Height="450" Width="800" Loaded="Window_Loaded">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+        <MenuItem Header="Close" Click="Closing_Click">
+        </MenuItem>
+        <MenuItem Header="Controleer Vooruitgang" Click="Vooruitgang">
+        </MenuItem>
+    </Menu>
+
+        <DockPanel Background="LightGray" DockPanel.Dock="Bottom">
+            <TextBlock Name="TxtTijd" />
+            <TextBlock Name="TxTID" />
+            <TextBlock Name="TxtAantal"  />
+        </DockPanel>
+
+        <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+                <TextBlock FontSize="25" Text="Vogels Spotten met PXL" Background="AliceBlue"/>
+            </StackPanel>
+
+            <StackPanel Name="SpRegistratie" Background="AliceBlue" Width="150" MouseEnter="RegistratieGroot" MouseLeave="RegistratieKlein">
+                <TextBlock Text="Naam" Margin="10" />
+                <TextBox Name="TxtNaam" Margin="20 0"/>
+                <TextBlock Text="E-mail" Margin="10" />
+                <TextBox Name="TxtEmail" Margin="20 0"/>
+
+                <RadioButton Name="RbProgrameren" Margin="20" IsChecked="True"  Content="Programeren" />
+                <RadioButton Name="RbSysteem" Margin="20" Content="Systeem-en Netwerkbeheer" />
+                <RadioButton Name="RbDigital" Margin="20" Content="Digitale vormgeving" />
+
+                <Button Name="BtnRegistreer" Content="Registreer" Margin="20" Click="BtnRegistreer_Click" />
+            </StackPanel>
+
+
+
+
+
+            <Grid Name="TheGrid" IsEnabled="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height=".5*"/>
+                </Grid.RowDefinitions>
+
+
+                <GroupBox Margin="10" Header="Gespotte Vogels">
+                    <ListBox Name="LbGespotteVogels" Margin="20" SelectionChanged="ToonVogels"/>
+                </GroupBox>
+                
+                <GroupBox Margin="10" Header="Te Spotten Vogels" Grid.Row="1">
+                    <ComboBox Name="CbTeSpottenVogels" Margin="20" SelectionChanged="ToonVogels"/>
+                </GroupBox>
+
+                <CheckBox Name="CbGespot" Content="Is Gespot" Grid.Row="2" Margin="20" Checked="CbGespot_Checked" Unchecked="CbGespot_Checked"/>
+
+                <Image Name="Afbeelding" Grid.Column="1" Margin="20"  />
+
+                <TextBox IsEnabled="False"  Name="TxtInfo" FontFamily="Courier New" FontSize="16" Grid.Row="1" Grid.Column="1"/>
+
+
+
+
+            </Grid>
+
+
+    </DockPanel>
+        
+    </DockPanel>
+</Window>

@@ -1,0 +1,141 @@
+﻿<Window x:Class="Pizza_Oefening.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pizza_Oefening"
+        mc:Ignorable="d"
+        Title="Pizza's Bij Bruno" Height="660" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Margin="30 10 0 0" Content="Pizza's bij Bruno's" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="0"/>
+
+        <StackPanel Margin="30 10 0 0" Grid.Column="0" Grid.Row="1">
+            <Label Content="Naam"  HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Name="txtNaam" Width="350" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Margin="30 10 0 0" Grid.Column="0" Grid.Row="2">
+            <Label Content="Telefoonnmmer" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Name="txtTel" Width="350" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Margin="30 10 0 0" Grid.Column="0" Grid.Row="3">
+            <Label Content="E-mail" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Name="txtEmail" Width="350" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Margin="30 10 0 0" Grid.Column="0" Grid.Row="4">
+            <Label Content="Adres" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Name="txtAdres" Width="350" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+       
+        <StackPanel Margin="30 10 0 0" Grid.Column="0" Grid.Row="5">
+            <Label Content="Woonplaats" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Name="txtWoonplaats" Width="350" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Margin="30 10 0 0" Grid.Column="0" Grid.Row="6">
+            <Label Content="Postcode" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Name="txtPostcode" Width="350" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+
+        <Label Content="Pizza'" Margin="10 0 0 0 " Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Toppings" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Grid.RowSpan="5" Margin="30 10 0 0">
+            <DockPanel>
+                <Button Name="btnMnQStag" Content="-" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click" />
+                <TextBox Text="0" Name="txtInputQStag" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0"/>
+                <Button Name="btnPlsQStag" Content="+" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click"/>
+                <Label  Content="Pizza Quatro Stagioni (€12,5)" FontSize="9"/>
+                <Slider x:Name="sldrQStag" AutoToolTipPlacement="TopLeft" Minimum="0" Maximum="15" TickFrequency="1"
+                        IsSnapToTickEnabled="True" ValueChanged="sldrQStag_ValueChanged" Width="80" HorizontalAlignment="Right"/>
+            </DockPanel>
+
+            <DockPanel>
+                <Button Name="btnMnCapri" Content="-" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click" />
+                <TextBox Text="0" Name="txtInputCapri" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0"/>
+                <Button Name="btnPlsCapri" Content="+" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click"/>
+                <Label  Content="Pizza Capricciosa (€13,0)" FontSize="9"/>
+                <Slider x:Name="sldrCapri" AutoToolTipPlacement="TopLeft" Minimum="0" Maximum="15" TickFrequency="1"
+                        IsSnapToTickEnabled="True" ValueChanged="sldrCapri_ValueChanged" Width="80" HorizontalAlignment="Right" />
+            </DockPanel>
+
+            <DockPanel>
+                <Button Name="btnMnSal" Content="-" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click"/>
+                <TextBox Name="txtInputSal" Text="0" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0"/>
+                <Button Name="btnPlsSal" Content="+" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click" />
+                <Label Content="Pizza Salami Al Fuoco (€12,0)" FontSize="9"/>
+                <Slider Name="sldrSal" AutoToolTipPlacement="TopLeft" Minimum="0" Maximum="15" TickFrequency="1"
+                        IsSnapToTickEnabled="True" ValueChanged="sldrSal_ValueChanged" Width="80" HorizontalAlignment="Right" />
+            </DockPanel>
+
+            <DockPanel>
+                <Button Name="btnMnPros" Content="-" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click"/>
+                <TextBox Name="txtInputPros" Text="0" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0"/>
+                <Button Name="btnPlsPros" Content="+" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click" />
+                <Label Content="Pizza Prosciutto (€11,0)" FontSize="9"/>
+                <Slider Name="sldrPros" AutoToolTipPlacement="TopLeft" Minimum="0" Maximum="15" TickFrequency="1"
+                        IsSnapToTickEnabled="True" ValueChanged="sldrPros_ValueChanged" Width="80" HorizontalAlignment="Right" />
+            </DockPanel>
+
+            <DockPanel>
+                <Button Name="btnMnQuat" Content="-" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click"/>
+                <TextBox Name="txtInputQuat" Text="0" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0"/>
+                <Button Name="btnPlsQuat" Content="+" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click" />
+                <Label Content="Pizza Quattro Formaggi (€12,5)" FontSize="9"/>
+                <Slider Name="sldrQuat" AutoToolTipPlacement="TopLeft" Minimum="0" Maximum="15" TickFrequency="1"
+                        IsSnapToTickEnabled="True" ValueChanged="sldrQuat_ValueChanged" Width="80" HorizontalAlignment="Right" />
+            </DockPanel>
+
+            <DockPanel>
+                <Button Name="btnMnHaw" Content="-" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click"/>
+                <TextBox Name="txtInputHaw" Text="0" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0"/>
+                <Button Name="btnPlsHaw" Content="+" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click" />
+                <Label Content="Pizza Hawai (€12,0)" FontSize="9"/>
+                <Slider Name="sldrHaw" AutoToolTipPlacement="TopLeft" Minimum="0" Maximum="15" TickFrequency="1"
+                        IsSnapToTickEnabled="True" ValueChanged="sldrHaw_ValueChanged" Width="80" HorizontalAlignment="Right" />
+            </DockPanel>
+
+            <DockPanel>
+                <Button Name="btnMnMar" Content="-" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click"/>
+                <TextBox Name="txtInputMar" Text="0" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0"/>
+                <Button Name="btnPlsMar" Content="+" FontSize="8" Width="12" Height="12" HorizontalAlignment="Left" Margin="0 0 2 0" Click="btnPizza_Click" />
+                <Label Content="Pizza Margeherita (€9,0)" FontSize="9"/>
+                <Slider Name="sldrMar" AutoToolTipPlacement="TopLeft" Minimum="0" Maximum="15" TickFrequency="1"
+                        IsSnapToTickEnabled="True" ValueChanged="sldrMar_ValueChanged" Width="80" HorizontalAlignment="Right" />
+            </DockPanel>
+
+            <Button Name="btnBestel" Content="Bestel Pizza's" Width="200" Margin="0 10 0 0" Click="btnBestel_Click" />
+
+        </StackPanel>
+        
+        <TextBox    Name="txtBestelling"
+                    Text="Onze Pizza's zijn de beste!&#xD;&#xA;Het is Wetenschappelijk bewezen dat pizza's goed zijn voor de gezondheid" TextWrapping="Wrap" IsReadOnly="True" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" Margin="5px" />
+        <StackPanel Name="stplExtras" Grid.Row="2" Grid.Column="2" Grid.RowSpan="3" Margin="30 10 20 0">
+            <CheckBox Name="chkMoz" Content="Extra Mozarella (€0.50)" Height="26"  Width="173"
+                      Unchecked="tik_Checked" Checked="tik_Checked" FontSize="8" />
+            <CheckBox Name="chkSal" Content="Extra Salami (€0.50)" Height="26" Width="173"
+                      Unchecked="tik_Checked" Checked="tik_Checked" FontSize="8"/>
+            <CheckBox Name="chkAns" Content="Extra Ansjovis (€0.50)" Height="26" Width="173"
+                      Unchecked="tik_Checked" Checked="tik_Checked" FontSize="8"/>
+            <CheckBox Name="chkArt" Content="Extra Artisjok (€0.50)" Height="26" Width="173"
+                      Unchecked="tik_Checked" Checked="tik_Checked" FontSize="8"/>
+        </StackPanel>
+        
+
+
+    </Grid>
+</Window>

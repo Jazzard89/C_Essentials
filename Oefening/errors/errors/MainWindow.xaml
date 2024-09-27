@@ -1,0 +1,29 @@
+﻿<Window x:Class="errors.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:errors"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="10">
+            <TextBox Name="tbGetal1" Margin="5"/>
+            <TextBox Name="tbGetal2" Margin="5"/>
+        </StackPanel>
+
+        <Label Name="lblInfo" Grid.Row="1"/>
+
+        <Button Name="BtnTestDebug" Grid.Column="1" Grid.Row="0" Margin="50" Content="Test debug" Click="BtnTestDebug_Click"/>
+    </Grid>
+</Window>

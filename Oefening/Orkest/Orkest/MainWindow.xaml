@@ -1,0 +1,60 @@
+﻿<Window x:Class="Orkest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Orkest"
+        mc:Ignorable="d"
+        Title="Event planner" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="top" Background="Black" >
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Events" >
+                    <MenuItem Header="Verwijder alle events">
+                    </MenuItem>
+                    <MenuItem Header="Maak standard event"/>
+                </MenuItem>
+                <MenuItem Header="Afsluiten" Click="Afsluiten_Click" >
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="0" Margin="10">
+                <Label Content="Type Event"/>
+                <ComboBox Name="cbTypeEvent">
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="10">
+                <Label Content="Naam Event"/>
+                <TextBox Name="txtNaamEvent"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Grid.Column="0" Margin="10">
+                <Label Content="Aantal bezoekers"/>
+                <TextBox Name="txtAantalBezoekers" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Grid.Column="0" >
+                <Button Name="btnVoegToe" Content="Voeg event toe" Margin="10" Click="BtnVoegEventToe_Click"/>
+                <Button Name="btnVerwijder" Content="Verwijder event" Margin="10" Click="BtnVerwijderEvent_Click"/>
+            </StackPanel>
+
+            <ListBox Name="lbEvent" Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" Grid.ColumnSpan="2" Margin="15"/>
+
+        </Grid>
+    </DockPanel>
+</Window>
